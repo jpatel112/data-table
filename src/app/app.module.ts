@@ -12,7 +12,7 @@ import { TutorialsListComponent } from './components/tutorials-list/tutorials-li
 import { DataTableTestComponent } from './components/data-table-test/data-table-test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
