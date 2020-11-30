@@ -6,7 +6,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatToolbarModule } from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const Material = [
   MatFormFieldModule,
@@ -16,11 +17,12 @@ const Material = [
   MatSortModule,
   MatButtonModule,
   MatIconModule,
-  MatToolbarModule
+  MatToolbarModule,
+  DragDropModule,
 ];
 
 @NgModule({
-  imports: [ Material ],
-  exports: [ Material ]
+  imports: [Material],
+  exports: [Material],
 })
-export class MaterialModule { }
+export class MaterialModule {}

@@ -53,7 +53,7 @@ const NAMES: string[] = [
 @Component({
   selector: 'app-data-table-test',
   templateUrl: './data-table-test.component.html',
-  styleUrls: ['./data-table-test.component.css'],
+  styleUrls: ['./data-table-test.component.scss'],
 })
 export class DataTableTestComponent implements AfterViewInit, OnInit {
   displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
