@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,10 @@ import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DndDirective } from './directives/dnd.directive';
 import { ProgressComponent } from './components/upload-file/progress/progress.component';
+import { InterceptorService } from '../app/services/interceptor.service';
+import { SuccessfulListComponent } from './components/successful-list/successful-list.component';
+import { ReceivedListComponent } from './components/received-list/received-list.component';
+import { ReceivedInfoComponent } from './components/received-list/received-info/received-info.component';
 
 @NgModule({
   declarations: [
@@ -24,17 +28,24 @@ import { ProgressComponent } from './components/upload-file/progress/progress.co
     RoutingComponents,
     DndDirective,
     ProgressComponent,
+    SuccessfulListComponent,
+    ReceivedListComponent,
+    ReceivedInfoComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MaterialModule,
     FlexLayoutModule,
+
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

@@ -8,6 +8,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
+
+
 
 const Material = [
   MatFormFieldModule,
@@ -19,10 +27,16 @@ const Material = [
   MatIconModule,
   MatToolbarModule,
   DragDropModule,
+  MatTooltipModule,
+  MatProgressSpinnerModule,
+  MatCardModule,
+  MatProgressBarModule,
+  MatSnackBarModule,
+  MatSelectModule
 ];
 
 @NgModule({
   imports: [Material],
   exports: [Material],
 })
-export class MaterialModule {}
+export class MaterialModule { }
